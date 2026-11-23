@@ -4,11 +4,17 @@ Estimate how many operating cycles remain when a simulated turbofan is observed 
 
 ![Four phases from NASA engine cycles through preparation, training, and evaluation.](figures/pipeline.svg)
 
+The workflow schematic shows the engine, trailing sensor window, boosted trees and evaluation cutoff. The icons are conceptual.
+
 ## Results
 
 On the 100 official FD001 test engines, mean absolute error fell from **31.05** to **18.62 cycles**. RMSE fell from **39.85** to **26.04 cycles**. Errors were smaller below 50 remaining cycles. The group sizes in the chart matter when interpreting the comparison.
 
-![MAE for both models and sensor-model error by actual remaining-life group.](figures/results.svg)
+![Three panels showing model errors, predicted versus actual RUL, and per-engine absolute errors by actual RUL group.](figures/results.svg)
+
+**a,** MAE and RMSE across all endpoints. **b,** Sensor-model predictions for individual engines. The dashed line marks exact agreement. **c,** Absolute errors at each endpoint, grouped by actual RUL. Plum lines mark group means of 9.36, 21.98 and 23.24 cycles. The groups contain 30, 36 and 34 engines, respectively.
+
+[Workflow PDF](figures/pipeline.pdf) · [Results PDF](figures/results.pdf)
 
 [Metrics and archive hash](evidence/metrics.json) · [Per-engine predictions](evidence/predictions.csv)
 
@@ -29,3 +35,5 @@ python figures.py
 ```
 
 Use `python evaluate.py --zip /path/to/CMAPSSData.zip` for an offline run. The original archive is downloaded from NASA and remains outside Git. [NASA C-MAPSS source data](https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data)
+
+The Matplotlib style follows the publication-figure conventions documented by [Chen Liu's figures4papers](https://github.com/ChenLiu-1996/figures4papers). The schematics and plotting implementation are specific to this project.
