@@ -1,5 +1,7 @@
 # Engine Remaining Useful Life from NASA C-MAPSS
 
+![Turbofan life prediction project illustration.](figures/project-illustration.svg)
+
 Estimate how many operating cycles remain when a simulated turbofan is observed partway through its life. This project compares a simple engine-age baseline with a gradient-boosted model using sensor history.
 
 ![Four phases from NASA engine cycles through preparation, training, and evaluation.](figures/pipeline.svg)
