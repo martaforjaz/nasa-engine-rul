@@ -1,0 +1,13 @@
+{
+  "age_baseline": {
+    "mae": 31.05,
+    "rmse": 39.8486
+  },
+  "sensor_model": {
+    "mae": 18.6215,
+    "rmse": 26.0387
+  },
+  "train_engines": 100,
+  "test_engines": 100,
+  "archive_sha256": "74bef434a34db25c7bf72e668ea4cd52afe5f2cf8e44367c55a82bfd91a5a34f"
+}
